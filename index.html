@@ -20,8 +20,26 @@
   <title>Little Lemon</title>
 </head>
 
+<header>
+
+  <img src="images/Little-Lemon-img1.svg" alt="Little Lemon logo" />
+
+  <h1>Little Lemon</h1>
+
+  <a href="#About-Little-Lemon">About Little Lemon</a>
+
+  <a href="#The-History-Of-Little-Lemon">The History Of Little Lemon</a><br />
+
+
+  <hr>
+</header>
+
+
+<br>
+<br>
+
 <body>
-  <img src="images/Little-Lemon-img1.svg" alt="Little Lemon" />
+  <!-- <img src="images/Little-Lemon-img1.svg" alt="Little Lemon logo" /> -->
 
   <p>
     This is the <em><strong>Little Lemon</strong></em> website.
@@ -36,12 +54,63 @@
   <nav>
     <!-- <a href="images/My_photo.jpeg"> <img src="images/Little-Lemon-img1.svg" alt=""> -->
 
-    <a href="images/My_photo.jpeg" target="_blank">My Photo</a><br />
+    <figure>
+      <a href="images/My_photo.jpeg" target="_blank" alt="This is my current photo.">My Photo</a><br />
+      <figcaption>This is my current photo. Taken in a far away land.</figcaption>
+    </figure>
+
+
     <a href="images/My_photo.jpeg" download>Download My Photo</a><br />
 
-    <a href="#About-Little-Lemon">About Little Lemon</a><br />
+    <!-- <a href="#About-Little-Lemon">About Little Lemon</a><br />
 
-    <a href="#The-History-Of-Little-Lemon">The History Of Little Lemon</a><br />
+    <a href="#The-History-Of-Little-Lemon">The History Of Little Lemon</a><br /> -->
+
+    <br>
+
+    <a href="Django Classes.mp4" target="_blank rel=" noopener noreferrer">Django Classes</a>
+
+
+
+    <!-- <div class="Django">
+ <p>Django Classes</p> 
+      <video width="320" height="240" controls muted>
+        <source src="Django Classes.mp4" type="video/mp4">
+        <source src="Django Classes.webm" type="video/webm">
+        <source src="Django Classes.ogg" type="video/ogg">
+
+      </video>
+    </div> -->
+
+
+    <iframe src="https://www.opera.com" frameborder="0" width="250" height="250" sandbox
+      allow="payment 'none';camera 'none'; microphone 'none'"></iframe>
+
+
+    <br>
+    <br>
+
+
+    <div>
+      <p>Peaceful Sound</p>
+
+      <audio loop controls muted>
+        <source src="example_audio.mp3" type="audio/mpeg">
+        <source src="example_audio.ogg" type="audio/ogg">
+        <source src="example_audio.wav" type="audio/wav">
+      </audio>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <label for="site-search">Search the site:</label>
+    <input type="search" id="site-search" name="site-search" />
+
+    <button>Search</button>
 
     <main>
       <section>
@@ -106,13 +175,13 @@
       </section>
     </main>
 
-    <a href="#">Top of Page</a>
+    <!-- <a href="#">Top of Page</a> -->
 
-    <section>
-      <!-- <a href="https://google.com" target="_blank">Google</a> -->
+    <!-- <section>
+      <a href="https://google.com" target="_blank">Google</a> 
 
       <a href="mail" target="_blank">Mail Me</a>
-    </section>
+    </section> -->
 
     <!-- <figure>
   <img src="images/Little-Lemon-img1.svg" alt="Little Lemon the" />
@@ -145,7 +214,7 @@
       </fieldset>
 
       <br>
-      <fieldset>
+      <fieldset id="title">
 
         <legend><span class="number">2</span> Title</legend>
 
@@ -161,10 +230,22 @@
           <input type="radio" id="PHD." name="title" value="PHD."><br>
 
           <label for="Other">Other</label>
-          <input type="radio" id="Other" name="title" value="Other"><br>
+          <input type="radio" id="Other" name="title" value="Other" checked><br>
         </div>
       </fieldset>
 
+      <br>
+
+      <div>
+        <label for="booking_locations">Choose a Location</label><br>
+        <input id="booking_locations" name="booking_locations" list="locations">
+        <datalist id="locations">
+          <option value="LA, CA">Los Angeles, California</option>
+          <option value="CHI, IL">Chicago, Illinois</option>
+        </datalist>
+      </div>
+
+      <br>
       <br>
 
       <fieldset>
@@ -198,7 +279,7 @@
 
       <div>
         <label for="user_email">Email</label><br />
-        <input type="email" id="user_email" name="user_email" placeholder="name@something.com" required />
+        <input type="email" id="user_email" name="user_email" placeholder="name@example.com" required />
       </div>
 
       <br>
@@ -221,8 +302,31 @@
 
       <br>
 
+      <body>
+
+        <div class="slider-box">
+          <label for="num_people">Number of People</label>
+          <input type="range" id="num_people" name="people" min="1" max="10" value="5" required>
+          <div class="value-display">
+            <span id="range-val">5</span>
+          </div>
+        </div>
+
+        <script>
+          const mySlider = document.getElementById('num_people');
+          const myVal = document.getElementById('range-val');
+
+          mySlider.addEventListener('input', function () {
+            myVal.textContent = this.value;
+          });
+        </script>
+
+      </body>
+
+
       <!-- <div><button type="submit">Sign Up</button><br /></div> -->
   </section>
+
 
   <br>
 
@@ -269,20 +373,74 @@
   <br>
   <br>
 
+  <div>
+    <label for="comments">Additional Information</label><br>
+    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+  </div>
+
+  <br>
+  <br>
+
+
+  <div>
+    <label for="file">Choose a File:</label>
+    <input type="file" id="file" accept="image/png, image/jpeg"><br>
+  </div>
+
+  <br>
+  <br>
+
+
+  <div>
+
+    <label for="flowers">Favourite flower:</label><br>
+    <input list="flowers" name="flowers">
+    <datalist id="flowers">
+      <option value="Rose">
+      <option value="Lily">
+      <option value="Tulip">
+      <option value="Daffodil">
+      <option value="Orchid">
+    </datalist>
+
+  </div>
+
+  <br>
+  <br>
+
+
+  <div><button type="reset">Delete Form</button><br /></div>
+
+  <br>
+
   <div><button type="submit">Sign Up</button><br /></div>
+
+  <br>
+  <br>
+
+  <a href="#">Top of Page</a>
 
   <br>
   <br>
 
   <div>
     <label for="sat">Are you happy with our service?</label>
-    <input type="checkbox" id="sat" name="sat">
+    <input type="checkbox" id="sat" name="sat" checked>
 
   </div>
   <br>
 
   </form>
-  <footer>CopyRight &copy; Little Lemon</footer>
+
+  <hr>
+  <big><a href="j/about.html" target="_blank">Mail Me</a></big><br>
+
+  <br>
+
+  <small>
+    <footer>CopyRight &copy; Little Lemon</footer>
+  </small>
+
 </body>
 
 </html>

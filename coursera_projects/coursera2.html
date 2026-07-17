@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Little Lemon</title>
-  <meta property="og:title" content="Our Menu">
-  <meta property="og:type"  content="website">
-  <meta property="og:image" content="coursera2.html/logo.png">
-  <meta property="og:url"   content="https://littlelemon/">
-  <meta property="og:description" content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="Little Lemon">
+  <title>My Video Rating</title>
 
   <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
-  <header>
-    <img src="coursera2.html/logo.png">
-  </header>
-  <main>
 
-    <form action="Post">
-      <div>
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" minlength="2" required>
-      </div>
+  <div>
 
-      <div>
-        <label for="pass">Passoword</label>
-        <input type="password" id="pass" name="pass" minlength="2" required>
-      </div>
+    <video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.webm" type="video/webm">
+      <source src="video.ogg" type="video/ogg">
+    </video>
 
-      <button type="submit">Log In</button>
+  </div>
 
-    </form>
+  <form action="">
 
-  </main>
+    <div>
+
+      <label for="rating">Rate This Video</label>
+      <input type="range" id="rating" name="rating" min="1" max="5">
+      <div class="value-display">
+            <span id="range-val">5</span>
+          </div>
+        </div>
+
+        <script>
+          const mySlider = document.getElementById('rating');
+          const myVal = document.getElementById('range-val');
+
+          mySlider.addEventListener('input', function () {
+            myVal.textContent = this.value;
+          });
+        </script>
+
+
+    </div>
+
+    <div>
+
+      <datalist id="rating">
+
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </datalist>
+
+    </div>
+
+    <button type="submit">Submit Rating</button>
+
+  </form>
+  
 </body>
 
 </html>
