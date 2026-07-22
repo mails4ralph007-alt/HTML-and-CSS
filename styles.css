@@ -1,0 +1,20 @@
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    font-style: oblique;
+    text-transform:capitalize;
+    text-decoration:underline green double;
+    color: blue;
+}
+
+p {
+    font-size: 20px;
+    color:brown;
+}
+
+ul {
+    list-style-type: disc;
+}
