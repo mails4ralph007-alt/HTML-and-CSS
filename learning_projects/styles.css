@@ -58,14 +58,14 @@ Black: #000000 (Black)
 
 :root {
   /* FONT SIZE */
-  --text-sm: 12px;
-  --text-base: 16px;
-  --text-paragraph: 20px;
-  --text-h5: 24px;
-  --text-h4: 32px;
-  --text-h3: 40px;
-  --text-h2: 48px;
-  --text-h1: 62px;
+  --text-sm: 1.2rem;
+  --text-base: 1.6rem;
+  --text-paragraph: 2rem;
+  --text-h5: 2.4rem;
+  --text-h4: 3.2rem;
+  --text-h3: 4rem;
+  --text-h2: 4.8rem;
+  --text-h1: 6.2rem;
 
   /* FONT WEIGHTS */
   --font-weight-normal: 400;
@@ -109,7 +109,8 @@ Black: #000000 (Black)
   --white: #ffffff;
   --black: #000000;
 
-
+  /* MISCELLANEOUS */
+  --nav-height: 100px;
 }
 
 * {
@@ -120,6 +121,8 @@ Black: #000000 (Black)
 
 html {
   font-size: 62.5%;
+  /* 10px / 16px = 62.5% */
+  /* 1rem = 10px */
 }
 
 body {
@@ -147,30 +150,30 @@ h5 {
 }
 
 h1 {
-  font-size: 6.2rem;
+  font-size: var(--text-h1);
 }
 
 h2 {
-  font-size: 4.8rem;
+  font-size: var(--text-h2);
 }
 
 h3 {
-  font-size: 4rem;
+  font-size: var(--text-h3);
   text-align: left;
 }
 
 h4 {
-  font-size: 3.2rem;
+  font-size: var(--text-h4);
   text-align: left;
 }
 
 h5 {
-  font-size: 2.4rem;
+  font-size: var(--text-h5);
   text-align: left;
 }
 
 p {
-  font-size: 2rem;
+  font-size: var(--text-paragraph);
 }
 
 ul {
@@ -179,12 +182,19 @@ ul {
 
 a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: var(--text-base);
   display: inline-block;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--grey-base);
+}
+
 footer {
-  font-size: 1.2rem;
+  font-size: var(--text-sm);
 }
 
 span {
@@ -192,13 +202,13 @@ span {
 }
 
 .small-text {
-  font-size: 1.2rem;
+  font-size: var(--text-sm);
 }
 
 /* ----------------------------------- COMPONENTS ----------------------------------- */
 
 .btn {
-  font-size: 1.6rem;
+  font-size: var(--text-base);
   font-weight: var(--font-weight-normal);
   text-decoration: none;
   padding: 1.5rem 3rem;
@@ -273,35 +283,71 @@ span {
   width: 80px;
 }
 
-/* ----------------------------------- SECTIONS ----------------------------------- */
-
-/* ------- HEADER -------*/
-
-.header {
-  height: 100vh;
-  min-height: 800px;
+.chat-conatainer {
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--primary-tint);
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
 }
 
+.chat-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: var(--primary-base);
+}
+
+/* ----------------------------------- SECTIONS ----------------------------------- */
 
 /* ------- NAVBAR -------*/
 
 .navbar {
-  margin-bottom: 20rem;
+  height: var(--nav-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--black);
+}
+
+.nav-btn-container {
+  display: flex;
+  gap: 2rem;
 }
 
 /* ------- HERO SECTION -------*/
 
 .hero-section {
-  text-align: center;
-  margin-bottom: 30rem;
+  height: calc(100vh - var(--nav-height));
+  min-height: 400px;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-heading {
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .hero-paragraph {
   margin-bottom: 5rem;
+  text-align: center;
+}
+
+.hero-btn-container {
+  display: flex;
+  gap: 2rem;
 }
 
 /* ------- FEATURES SECTION -------*/
@@ -313,6 +359,20 @@ span {
 .features-main-heading {
   text-align: center;
   margin-bottom: 8rem;
+}
+
+.features-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 15rem;
+  column-gap: 5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.feature-img-swap-order {
+  grid-row: 2 / 3;
+  grid-row: 1 / 2;
 }
 
 .features-heading {
@@ -328,27 +388,47 @@ span {
 
 .cta-section {
   margin-bottom: 30rem;
+  display: flex;
+  justify-content: center;
 }
 
 .cta-card {
   text-align: center;
   background-color: var(--primary-base);
   max-width: 1000px;
+  width: 100%;
   padding: 10rem 20rem;
   border-radius: 20px;
-  margin: 0px auto;
 }
 
 .cta-heading {
   margin-bottom: 3rem;
+  color: var(--white);
 }
 
 /* ------- FOOTER -------*/
 
 .footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icons-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links-container {
+  display: flex;
+  gap: 1rem;
 }
 
 .social-icons {
   width: 20px;
+}
+
+.heart-icon {
+  color: var(--secondary-base);
 }
