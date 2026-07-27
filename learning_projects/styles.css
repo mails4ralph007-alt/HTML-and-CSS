@@ -303,6 +303,64 @@ span {
   fill: var(--primary-base);
 }
 
+/* .modal-container {
+  margin: 0px auto;
+}
+
+.modal {
+  position: fixed;
+  top: 5rem;
+  left: 10rem;
+  bottom: 5rem;
+  background-color: var(--primary-shade);
+  border: 2px solid var(--black);
+  border-radius: 1rem;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+} */
+
+/* .modal-heading {
+  margin-bottom: 3rem;
+}
+
+.modal-paragraph {
+  font-size: var(--text-paragraph);
+  font-weight: var(--font-weight-bold);
+  color: var(--black);
+  margin-bottom: 2rem;
+  line-height: var(--line-height-tight);
+}
+
+.exit-button-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #000000;
+} */
+
+/* .exit-button {
+  width: 5rem;
+  height: 5rem;
+  padding: 0rem;
+  position: absolute;
+  top: 7rem;
+  right: 5rem;
+  border: 1px solid var(--black);
+  color: var(--white);
+  background-color: var(--black);
+  align-self: center;
+  justify-self: center;
+   position: relative;
+  top: 0;
+  right: 0;
+} */
+
+
 /* ----------------------------------- SECTIONS ----------------------------------- */
 
 /* ------- NAVBAR -------*/
