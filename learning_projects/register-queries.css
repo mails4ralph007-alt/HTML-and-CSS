@@ -1,0 +1,10 @@
+@media (max-width: 67rem) {
+  /* 1060px / 16px = 67rem */
+  /* 67rem x 16px = 1072px */
+}
+
+  html {
+    font-size: 37.5%;
+    /* 6px / 16px = 37.5% */
+  } 
+  /* get the correct font size for the html */

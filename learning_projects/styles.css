@@ -220,6 +220,7 @@ span {
   color: var(--white);
   background-color: var(--primary-base);
   border: 2px solid var(--primary-base);
+  transition: 0.5s;
 }
 
 .btn-primary:hover,
@@ -227,6 +228,8 @@ span {
   color: var(--white);
   background-color: var(--primary-shade);
   border: 2px solid var(--primary-shade);
+  transform: scale(1.2, 1.2);
+  box-shadow: 0px 3px 6px 0px var(--grey-base);
 }
 
 .btn-primary-outline:link,
@@ -234,6 +237,7 @@ span {
   background-color: var(--white);
   color: var(--primary-base);
   border: 2px solid var(--primary-base);
+  transition: 0.5s;
 }
 
 .btn-primary-outline:hover,
@@ -241,6 +245,8 @@ span {
   background-color: var(--white);
   color: var(--primary-shade);
   border: 2px solid var(--primary-shade);
+  transform: scale(1.2, 1.2);
+  box-shadow: 0px 3px 6px 0px var(--grey-base);
 }
 
 .btn-secondary:link,
@@ -248,6 +254,7 @@ span {
   color: var(--white);
   background-color: var(--secondary-base);
   border: 2px solid var(--secondary-base);
+  transition: 0.5s;
 }
 
 .btn-secondary:hover,
@@ -255,6 +262,8 @@ span {
   color: var(--white);
   background-color: var(--secondary-shade);
   border: 2px solid var(--secondary-shade);
+  transform: scale(1.2, 1.2);
+  box-shadow: 0px 3px 6px 0px var(--grey-base);
 }
 
 .highlight {
@@ -263,13 +272,38 @@ span {
   border-radius: 4px;
 }
 
+/* PRIMARY HIGHLIGHTS */
+
 .highlight-primary {
   background-color: var(--primary-base);
 }
 
+.highlight-primary-tint {
+  background-color: var(--primary-tint);
+}
+
+.highlight-primary-shade {
+  background-color: var(--primary-shade);
+}
+
+
+/* SECONDARY HIGHLIGHTS */
+
 .highlight-secondary {
   background-color: var(--secondary-base);
 }
+
+.highlight-secondary-tint {
+  background-color: var(--secondary-tint)
+}
+
+.highlight-secondary-shade {
+  background-color: var(--secondary-shade)
+}
+
+/* --secondary-base: #9775fa;
+  --secondary-tint: #e5dbff;
+  --secondary-shade: #7048e8; */
 
 .highlight-tertiary {
   background-color: var(--tertiary-base);
@@ -301,6 +335,27 @@ span {
   width: 3.5rem;
   height: 3.5rem;
   fill: var(--primary-base);
+}
+
+.beta {
+  position: relative;
+}
+
+.beta::after {
+  content: "beta";
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+  background-color: var(--tertiary-base);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: var(--white);
+  transform: translate(90%, -80%);
+}
+
+.shadow {
+  box-shadow: 5px 5px 10px 0px var(--black);
 }
 
 /* .modal-container {
@@ -360,7 +415,6 @@ span {
   right: 0;
 } */
 
-
 /* ----------------------------------- SECTIONS ----------------------------------- */
 
 /* ------- NAVBAR -------*/
@@ -374,6 +428,7 @@ span {
   position: sticky;
   top: 0;
   border-bottom: 1px solid var(--black);
+  background-color: var(--white);
 }
 
 .nav-btn-container {
@@ -406,6 +461,17 @@ span {
 .hero-btn-container {
   display: flex;
   gap: 2rem;
+}
+
+.phone-icon {
+  background-color: var(--white);
+  transition: all 1s ease-in;
+}
+
+.phone-icon:hover,
+.phone-icon:active {
+  transform: skew(10deg, 10deg);
+  box-shadow: 0px 3px 10px 0px var(--grey-base);
 }
 
 /* ------- FEATURES SECTION -------*/
